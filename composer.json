@@ -1,0 +1,24 @@
+{
+    "name": "sczarnop/ci-test-service",
+    "description": "test service",
+    "require": {
+        "silex/silex": "^1.3"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "^2.4"
+    },
+    "authors": [
+        {
+            "name": "sczarnop",
+            "email": "sczarnop@gmail.com"
+        }
+    ],
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-4": {
+            "CiTest/Service": "src/"
+        }
+    }
+}
