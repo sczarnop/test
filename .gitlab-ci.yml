@@ -1,0 +1,19 @@
+image: php:7-fpm
+
+cache:
+  paths:
+  - vendor/
+
+before_script:
+- apt-get update -yqq
+- apt-get install git -yqq
+- apt-get install curl -yqq
+- apt-get autoremove -y
+- apt-get autoclean -y
+- curl -sS https://getcomposer.org/installer | php
+- php composer.phar install
+
+test:app:
+  script:
+  - bin/phpspec run
+
