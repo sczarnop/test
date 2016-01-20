@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "CiTest/Service": "src/"
+            "CiTest\\Service\\": "src/"
         }
     }
 }

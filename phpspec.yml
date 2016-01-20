@@ -1,0 +1,4 @@
+suites:
+    default:
+        namespace: CiTest\Service
+        psr4_prefix: CiTest\Service

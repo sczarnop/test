@@ -1,0 +1,17 @@
+web:
+  image: nginx
+  ports:
+    - "8888:80"
+  volumes:
+    - .:/usr/share/nginx/html
+    - ./vhost.conf:/etc/nginx/conf.d/vhost.conf
+    - ./log/error.log:/var/log/nginx/error.log
+    - ./log/access.log:/var/log/nginx/access.log
+  links:
+    - php
+
+php:
+  build: .
+  volumes:
+#    - ../src/php-fpm.conf:/etc/php5/fpm/php-fpm.conf
+    - .:/usr/share/nginx/html
